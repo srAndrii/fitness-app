@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
-    console.log(exerciseVideos)
+    
     // if (!exerciseVideos.length) return "Loading..."
     return (
         <Box sx={{marginTop:{lg:'200px', xs:'20px'}}} p='20px' >
@@ -13,7 +13,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                 flexDirection: { lg: 'row' },
                 gap: {lg:'110px', xs:'0'}
             }} >
-                {exerciseVideos?.slice(0, 6).map((item, index)=>(
+                {exerciseVideos?.slice(0, 3).map((item, index)=>(
                 <a
                     key={index}
                     className='exercise-video'
