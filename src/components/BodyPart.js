@@ -1,11 +1,12 @@
-import React from 'react'
-import {  Stack, Typography } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
+
+import { icons } from '../constants'
 
 
-import Icon from '../assets/icons/gym.png'
-
-
-const BodyPart = ({item, setBodyPart, bodyPart}) => {
+const BodyPart = ({ item, setBodyPart, bodyPart }) => {
+ 
+    const body_part_name = item.split(' ').join('_')
+    
     return (
         <Stack
             type='button'
@@ -26,7 +27,12 @@ const BodyPart = ({item, setBodyPart, bodyPart}) => {
                 window.scrollTo({top:1800, left:100, behavior:'smooth'})
             }}
         >
-            <img src={Icon} alt="dumbbell" style={{ width: '40px', height: '40px' }} />
+            {    // eslint-disable-next-line
+                icons.map((img) => {
+                    if (img.includes(body_part_name)) {
+                        return <img key={item} src={img} alt="dumbbell" style={{ width: '140px', height: 'auto' }} />
+                    }
+                })}
             <Typography
                 fontSize='24px'
                 fontWeight='bold'

@@ -1,8 +1,10 @@
-import React from 'react'
 import { useState, useEffect } from 'react'
+
 import Pagination from '@mui/material/Pagination'
-import { Box, Button, Stack,Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
+
 import { fetchData, exrecisesOptions } from '../utils/fetchData'
+
 import ExerciseCard from './ExerciseCard'
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
@@ -12,7 +14,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const indexOfLastExercise = currentPage * exercisesPerPage
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage
     const currentExercises = exercises.slice(indexOfFirstExercise,indexOfLastExercise)
-
 
     const paginate = (e, value) => {
         setCurrentPage(value)
@@ -31,6 +32,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             setExercises(exercisesData)
         }
         fetchExercisesData()
+        // eslint-disable-next-line
     },[bodyPart])
 
     return (

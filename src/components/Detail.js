@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Stack, Typography } from '@mui/material'
 
 import BodyPartImage from '../assets/icons/body-part.png'
