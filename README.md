@@ -1,6 +1,17 @@
+![fitness](https://user-images.githubusercontent.com/90868495/182451910-e505f7f2-3426-4175-aa22-e446634905b0.gif)
+
+### `Fitness Exercises App` build with:
+* ReactJS
+* Material UI 
+* ExerciseDB API
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
 
 ## Available Scripts
 
